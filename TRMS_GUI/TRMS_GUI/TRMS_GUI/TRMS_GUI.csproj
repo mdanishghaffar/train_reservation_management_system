@@ -1,0 +1,211 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{4FD6FCCF-6A43-4322-9324-3B3691B0B17A}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>TRMS_GUI</RootNamespace>
+    <AssemblyName>TRMS_GUI</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BL\Business.cs" />
+    <Compile Include="BL\Economy.cs" />
+    <Compile Include="BL\Employee.cs" />
+    <Compile Include="BL\Medium.cs" />
+    <Compile Include="BL\TicketBL.cs" />
+    <Compile Include="BL\Train.cs" />
+    <Compile Include="BL\User.cs" />
+    <Compile Include="DL\TicketDL.cs" />
+    <Compile Include="DL\TrainDL.cs" />
+    <Compile Include="DL\UserDL.cs" />
+    <Compile Include="UI\Admin\Delete Employee.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Admin\Delete Employee.Designer.cs">
+      <DependentUpon>Delete Employee.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Admin\Earnings.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Admin\Earnings.Designer.cs">
+      <DependentUpon>Earnings.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Admin\Edit Train.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Admin\Edit Train.Designer.cs">
+      <DependentUpon>Edit Train.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\EmployeeUser\Book Ticket.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\EmployeeUser\Book Ticket.Designer.cs">
+      <DependentUpon>Book Ticket.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Admin\Trains.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Admin\Trains.Designer.cs">
+      <DependentUpon>Trains.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\EmployeeUser\Delete Tickets.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\EmployeeUser\Delete Tickets.Designer.cs">
+      <DependentUpon>Delete Tickets.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\EmployeeUser\View Available Seats.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\EmployeeUser\View Available Seats.Designer.cs">
+      <DependentUpon>View Available Seats.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Admin\View Cancelled Tickets.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Admin\View Cancelled Tickets.Designer.cs">
+      <DependentUpon>View Cancelled Tickets.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\EmployeeUser\Employee Menu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\EmployeeUser\Employee Menu.Designer.cs">
+      <DependentUpon>Employee Menu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Admin\Add Employee.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Admin\Add Employee.Designer.cs">
+      <DependentUpon>Add Employee.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Admin\Add Train.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Admin\Add Train.Designer.cs">
+      <DependentUpon>Add Train.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Admin\Admin Menu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Admin\Admin Menu.Designer.cs">
+      <DependentUpon>Admin Menu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Log In.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Log In.Designer.cs">
+      <DependentUpon>Log In.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UI\Admin\View Booked Tickets.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Admin\View Booked Tickets.Designer.cs">
+      <DependentUpon>View Booked Tickets.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="UI\Admin\Delete Employee.resx">
+      <DependentUpon>Delete Employee.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Admin\Earnings.resx">
+      <DependentUpon>Earnings.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Admin\Edit Train.resx">
+      <DependentUpon>Edit Train.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Admin\Trains.resx">
+      <DependentUpon>Trains.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\EmployeeUser\Book Ticket.resx">
+      <DependentUpon>Book Ticket.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\EmployeeUser\Delete Tickets.resx">
+      <DependentUpon>Delete Tickets.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\EmployeeUser\View Available Seats.resx">
+      <DependentUpon>View Available Seats.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Admin\View Cancelled Tickets.resx">
+      <DependentUpon>View Cancelled Tickets.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\EmployeeUser\Employee Menu.resx">
+      <DependentUpon>Employee Menu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Admin\Add Employee.resx">
+      <DependentUpon>Add Employee.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Admin\Add Train.resx">
+      <DependentUpon>Add Train.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Admin\Admin Menu.resx">
+      <DependentUpon>Admin Menu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Log In.resx">
+      <DependentUpon>Log In.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="UI\Admin\View Booked Tickets.resx">
+      <DependentUpon>View Booked Tickets.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Class Diagram.cd" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
